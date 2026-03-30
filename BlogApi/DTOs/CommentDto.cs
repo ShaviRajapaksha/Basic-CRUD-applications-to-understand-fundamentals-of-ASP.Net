@@ -13,6 +13,17 @@ public class CreateCommentDto
 
 }
 
+public class UpdateCommentDto
+{
+    [Required]
+    public string Content { get; set; } = string.Empty;
+
+    [Required]
+    [StringLength(100)]
+    public string Author { get; set; } = string.Empty;
+
+}
+
 public class CommentResponseDto
 {
     public string Content { get; set; } = string.Empty;
